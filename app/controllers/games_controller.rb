@@ -11,10 +11,11 @@ class GamesController < ApplicationController
     # raise
     if valid?(@word, @letters) == false
       @result = "Sorry but <strong>#{@word}</strong> can't be built out of #{@letters.join(', ')}"
-    elsif english?(@word)
+    elsif english?(@word) == true
+      @result = "<strong>Congratulations!</strong> #{@word} is a valid English word!"
+    else
       @result = "Sorry but <strong>#{@word}</strong> does not seem to be a valid English word..."
     end
-    # @valid_english = english?(@word)
   end
 
   def valid?(word, letters)

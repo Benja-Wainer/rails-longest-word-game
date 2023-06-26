@@ -3,5 +3,7 @@ class GamesController < ApplicationController
     @letters = (1..10).map{('A'..'Z').to_a[rand(26)]}
   end
 
-  def score; end
+  def score
+    raise
+  end
 end

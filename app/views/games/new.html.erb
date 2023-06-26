@@ -6,7 +6,7 @@
   <% end %>
 </ul>
 
-<form action="TODO" method="TODO" data-turbo="false">
+<form action="/score" method="post" data-turbo="false">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <label for="word">What is the longest word you can find?</label>
   <input type="text" id="word" name="word">
